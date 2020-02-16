@@ -19,3 +19,15 @@ function getGender(){
         }
     }
 }
+function getName(){
+    var name =  document.getElementById("name").value;
+    var male = ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"];
+    var female = ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"];
+    if (getGender() === "male"){
+        alert(`Hey ${name}! if you were born in Ghana your name would be ${male[getDay(name)]}`);
+    }else if(getGender() === "female"){
+        alert(`Hey ${name}! if you were born in Ghana your name would be ${female[getDay(name)]}`);
+    }else{
+        alert("Confirm that you have selected your gender")
+    }
+}
