@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=
+    <meta name="viewport" content="width=device-width
     , initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/akan.css">
@@ -13,38 +13,47 @@
     <body class="container-fluid">
         <div class="jumbotron row">
             <div class="col-10">
-                <h1>BIRTHDAY NAMES GENERATOR</h1>
-                <p >This is an app that is used to calculate the day you were born and give you an Akan name depending on your birthday.</p>
+                <h1>AKAN NAMING SYTEM</h1>
+                <p >Akan names are derived from Ghanian culture. Frequently in Ghana, children are given their first name as a 'day name' which corresponds to the day in the week they were born and also the gender.</p>
             </div>
-        </div> 
+        </div>
         <div class="form row">
-            <div class="col-4">
-                </div>
-            <form name="akan names"></form>
-            <div>
+                <div class="col-4">
+                    </div>
+            <form onsubmit="return getName()">
+                <div>
                 <label class="a"><b>Enter name:</b></label>
                 <input type="text" placeholder="Enter your name" name="name" id="name" required>
                 </div>
-            <div>
-                <label class="b"><b>Birth Year:</b></label>
-                <input type="number" placeholder="YYYY" name="year" id="year" min="1" minlength="4" maxlength="4" step="1" required>
-            </div>   
-            <div>
-                <label class="d"><b>Birth date:</b></label>
-                <input type="number" placeholder="DD" name="date" id="date" min="1" max="31" step="1"required>
-            </div>
-            <div>
-                <p>Choose your gender</p>
-                <label for="male">Male</label>
-                <input id ="male" name="gender" type="radio" value="male">
-                <label for="female">Female</label>
-                <input id = "female" name="gender" type="radio" value="female">
-            </div>
-            <div>
-                <button type="submit" onclick="getName();return false;" value="submit">submit</button>
+                <div>
+                    <label class="b"><b>Birth year:</b></label>
+                    <input type="number" placeholder="YYYY" name="year" id="year" min="1" minlength="4" maxlength="4" step="1" required>
+                </div>
+                <div>
+                    <label class="c"><b>Birth Month:</b></label>
+                    <input type="number" placeholder="MM" name="month" id="month" min="1" max="12" step="1" required>
+                </div>
+                <div>
+                    <label class="d"><b>Birth date:</b></label>
+                    <input type="number" placeholder="DD" name="date" id="date" min="1" max="31" step="1"required>
+                </div>
+                <div>
+                    <p>Choose your gender:</p>
+                </div>
+                <div class="option">
+                    <label for="male">Male</label>
+                    <input id ="male" name="gender" type="radio" value="male">
+                    <label for="female">Female</label>
+                    <input id = "female" name="gender" type="radio" value="female">
+                </div>
+                <div class="button">
+                <button type="submit" onclick="getName();"  value="submit" >submit</button>
+                </div>
+                <div>
+                    <p id ="post"></p> 
                 </div>
             </form>
         </div>
-        <script src="script.js"></script> 
-</body>
-</html>
+        <script src="js/script.js"></script>
+    </body>
+    </html>

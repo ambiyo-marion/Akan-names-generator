@@ -1,5 +1,6 @@
 function getDay(name){
-    var month = parseInt(document.getElementById("month").value);var date = parseInt(document.getElementById("date").value);
+    var month = parseInt(document.getElementById("month").value);
+    var date = parseInt(document.getElementById("date").value);
     var year = document.getElementById("year").value;
     var century = year.slice(0, 2);
     var years = year.slice(2, 4);
@@ -26,7 +27,8 @@ function getName(){
     if (getGender() === "male"){
         alert(`Hey ${name}! if you were born in Ghana your name would be ${male[getDay(name)]}`);
     }else if(getGender() === "female"){
-        alert(`Hey ${name}! if you were born in Ghana your name would be ${female[getDay(name)]}`);
+        alert(`Hey ${name}! if you were born in Ghana your name would be ${male[getDay(name)]}`);
+        
     }else{
         alert("Confirm that you have selected your gender")
     }
